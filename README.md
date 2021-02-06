@@ -4,7 +4,7 @@
 
 ### Pipeline
 
-[zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) [→  [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)]
+[zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) → [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)
 
 ---
 
@@ -64,8 +64,8 @@ PAGE-XML output of the OCR process into a tab-separated-values format
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
 
-If images are served via `iiif-image-api`, the OCR coordinates cab be used to generate
-according image urls by also providing the iiif-server-baseurl `--image-url`
+If images are served via [iiif-image-api](https://iiif.io/api/image/2.1/), the OCR 
+coordinates can be used to generate according image urls by also providing the iiif-server-baseurl as `--image-url`
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv \
 --image-url=https://content.staatsbibliothek-berlin.de/zefys/SNP27974534-19010712-0-1-0-0/full/full/0/default.jpg
@@ -77,17 +77,21 @@ The following steps assume you have access to or setup local instances of both
 * [sbb_ned](https://github.com/qurator-spk/sbb_ned)
 
 #### sbb_ner
-
+```bash
+page2tsv SNP27974534-19010712-0-1-0-0.tsv --ner-rest-endpoint
+```
 
 #### sbb_ned
-
+```bash
+page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
+```
 
 #### trs
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
 
 #### neat
-You can use [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
+Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
 ```bash
 git clone https://github.com/qurator-spk/neat
 cd neat
