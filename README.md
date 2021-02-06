@@ -14,6 +14,8 @@
 recommended
 - `virtualenv`
 
+---
+
 Setup a Python3 virtual environment and activate it
 ```
 python3 -m venv /path_to_venv
@@ -47,9 +49,31 @@ to process digitised newspapers from ZEFYS with OCR based on their `zdb-id` and 
 ./zdb2ocr 27974534 19010712
 ```
 
-
 #### page2tsv
+Install [page2tsv](https://github.com/qurator-spk/page2tsv)
+```bash
+git clone https://github.com/qurator-spk/page2tsv
+cd page2tsv
+pip install .
+```
 
+You can now use [page2tsv](https://github.com/qurator-spk/page2tsv) to transform the 
+PAGE-XML output of the OCR process into a tab-separated-values format
+```bash
+page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
+```
+
+If images are served via `iiif-image-api`, the OCR coordinates cab be used to generate
+according image urls by also providing the iiif-server-baseurl `--image-url`
+```bash
+page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv \
+--image-url=https://content.staatsbibliothek-berlin.de/zefys/SNP27974534-19010712-0-1-0-0/full/full/0/default.jpg
+```
+
+**Warning**  
+The following steps assume you have access to or setup local instances of both
+* [sbb_ner](https://github.com/qurator-spk/sbb_ner)
+* [sbb_ned](https://github.com/qurator-spk/sbb_ned)
 
 #### sbb_ner
 
