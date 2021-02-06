@@ -11,7 +11,7 @@
 #### requirements
 - [Python3](https://www.python.org/) 
 
-recommended
+#### recommended
 - `virtualenv`
 
 ---
@@ -30,11 +30,9 @@ local
 mkdir zefys
 mount -o ro,noload /zefys/archive /zeyfs
 ```
-
 remote  
-> Download images via `iiif`  
+> Download images via [`iiif`](https://iiif.io/)  
 (see [sbb-lab](https://lab.sbb.berlin/5393/?lang=en) for further information)
-
 
 #### ocrd
 Install [OCR-D](https://ocr-d.de/) workflow via [ocrd-galley](https://github.com/qurator-spk/ocrd-galley)
@@ -45,9 +43,9 @@ cd ocrd-galley
 ```
 
 You can now use [zdb2ocr](https://github.com/qurator-spk/ocrd-galley/blob/master/zdb2ocr) 
-to process digitised newspapers from ZEFYS with OCR based on their `zdb-id` and date of issue `yyyymmdd`
+to OCR digitised newspapers from ZEFYS based on `zdb-id` and date of issue `yyyymmdd`
 ```bash
-./zdb2ocr 27974534 19010712
+zdb2ocr 27974534 19010712
 ```
 
 #### page2tsv
@@ -59,7 +57,7 @@ pip install .
 ```
 
 You can now use [page2tsv](https://github.com/qurator-spk/page2tsv) to transform the 
-PAGE-XML output of the OCR process into a tab-separated-values format
+[PAGE-XML](https://github.com/PRImA-Research-Lab/PAGE-XML) output of the OCR into a tab-separated-values (`tsv`) format
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
