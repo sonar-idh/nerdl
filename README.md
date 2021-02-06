@@ -19,7 +19,7 @@ source /path_to_venv/bin/activate
 ```
 
 #### zefys
-You need either local or remote access to the digitised newspapers images from [ZEFYS](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys)
+You need either local or remote access to the digitised newspaper images from [ZEFYS](http://zefys.staatsbibliothek-berlin.de/index.php?id=start&L=1)
 
 local
 ```bash
@@ -39,7 +39,8 @@ cd ocrd-galley
 ```
 
 You can now use [zdb2ocr](https://github.com/qurator-spk/ocrd-galley/blob/master/zdb2ocr) 
-to OCR digitised newspapers from ZEFYS based on `zdb-id` and date of issue `yyyymmdd`
+to OCR digitised newspapers from [ZEFYS](http://zefys.staatsbibliothek-berlin.de/index.php?id=start&L=1) based 
+on `zdb-id` and date of issue `yyyymmdd`
 ```bash
 zdb2ocr 27974534 19010712
 ```
@@ -58,14 +59,14 @@ You can now use [page2tsv](https://github.com/qurator-spk/page2tsv) to transform
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
 
-If images are served via [iiif](https://iiif.io/api/image/2.1/), the OCR coordinates can be used to 
+If images are served via [`iiif`](https://iiif.io/api/image/2.1/), the OCR coordinates can be used to 
 generate according image urls by also providing the `iiif-server-url`
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv \
 --image-url=https://content.staatsbibliothek-berlin.de/zefys/SNP27974534-19010712-0-1-0-0/full/full/0/default.jpg
 ```
 
-**Warning**  
+:warning: 
 The following steps assume you have access to or setup local instances of
 * [sbb_ner](https://github.com/qurator-spk/sbb_ner)
 * [sbb_ned](https://github.com/qurator-spk/sbb_ned)
@@ -86,14 +87,29 @@ page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
 
-Information provided by `tsv` files:
+Information provided by `tsv` filename:
   * `zdb-id`
   * date of issue
   * page/image number
-  * OCR coordinates of entity
+
+Example: `SNP27974534-19010712-0-1-0-0.tsv`
+
+Information provided in `tsv` file:
+  * sentence position
+  * token text
   * entity label
-  * wikidata id
-  * confidence score 
+  * embedded entity label
+  * wikidata ID
+  * OCR coordinates (top,bottom,left,right)
+  * confidence score
+  
+Example:
+```tsv
+36 	bekannter 	O 	O 	- 	0 	157 	181 	643 	660  0
+37 	Comédie 	B-ORG 	O 	Q61460498 	0 	197 	262 	643 	661  0.76
+38 	françaiſe 	I-ORG 	O 	Q61460498 	0 	277 	345 	642 	661  0.76
+39 	anvertraut 	O 	O 	- 	0 	359 	440 	644 	659  0
+```
 
 #### neat
 Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
