@@ -62,15 +62,15 @@ You can now use [page2tsv](https://github.com/qurator-spk/page2tsv) to transform
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
 
-If images are served via [iiif-image-api](https://iiif.io/api/image/2.1/), the OCR 
-coordinates can be used to generate according image urls by also providing the iiif-server-baseurl as `--image-url`
+If images are served via [iiif](https://iiif.io/api/image/2.1/), the OCR coordinates can be used to 
+generate according image urls by also providing the `iiif-server-url`
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv \
 --image-url=https://content.staatsbibliothek-berlin.de/zefys/SNP27974534-19010712-0-1-0-0/full/full/0/default.jpg
 ```
 
 **Warning**  
-The following steps assume you have access to or setup local instances of both
+The following steps assume you have access to or setup local instances of
 * [sbb_ner](https://github.com/qurator-spk/sbb_ner)
 * [sbb_ned](https://github.com/qurator-spk/sbb_ned)
 
