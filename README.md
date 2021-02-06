@@ -4,7 +4,7 @@
 
 ### Pipeline
 
-[zefys](http://zefys.staatsbibliothek-berlin.de/index.php?id=start&L=1) → [ocrd](https://github.com/qurator-spk/ocrd-galley) → [page2tsv](https://github.com/qurator-spk/page2tsv) → [sbb_ner](https://github.com/qurator-spk/sbb_ner) → [sbb_ned](https://github.com/qurator-spk/sbb_ned) → [trs](https://github.com/sonar-idh/Transformer) [→  [neat](https://github.com/qurator-spk/neat)]
+[zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) [→  [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)]
 
 ---
 
@@ -23,6 +23,7 @@ source /path_to_venv/bin/activate
 ```
 
 #### zefys
+You need either local or remote access to the digitised newspapers images from [ZEFYS](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys)
 
 local
 ```bash
