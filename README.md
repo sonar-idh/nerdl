@@ -75,11 +75,13 @@ The following steps assume you have access to or setup local instances of
 * [sbb_ned](https://github.com/qurator-spk/sbb_ned)
 
 #### sbb_ner
+Apply named entity recognition with [sbb_ner](https://github.com/qurator-spk/sbb_ner)
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.tsv --ner-rest-endpoint
 ```
 
 #### sbb_ned
+Apply named entity disambiguation and linking with [sbb_ned](https://github.com/qurator-spk/sbb_ned)
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
 ```
