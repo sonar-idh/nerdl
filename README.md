@@ -82,6 +82,14 @@ The following steps assume you have access to or setup local instances of both
 
 
 #### trs
-
+**TODO**  
+Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
 
 #### neat
+You can use [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
+```bash
+git clone https://github.com/qurator-spk/neat
+cd neat
+firefox index.html
+```
+
