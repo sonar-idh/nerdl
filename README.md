@@ -87,29 +87,34 @@ page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
 
-Information provided by `tsv` filename:
-  * `zdb-id`
-  * date of issue
+Information provided by `tsv` filename:  
+
+SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
+  * `zdb-id` (any `-` removed)
+  * date of issue (`yyyymmdd`)
+  * issue number (`0` = morning issue, `1` = evening issue etc., default `0`)
   * page/image number
+  * article id (not used, default `0`)
+  * version number (not used, default `0`)
 
 Example: `SNP27974534-19010712-0-1-0-0.tsv`
 
 Information provided in `tsv` file:
   * sentence position
-  * token text
-  * surface entity label
+  * token text (`utf-8`) 
+  * surface entity label 
   * embedded entity label
   * surface entity wikidata ID
   * `iiif` url
-  * token OCR coordinates (left,top,width,height)
+  * token OCR coordinates (`left`,`top`,`width`,`height`)
   * entity linking confidence
   
 Example:
 ```tsv
-36 	bekannter 	O 	O 	-           	iiif_url 	157 	181 	643 	660  0
-37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	iiif_url 	197 	262 	643 	661  0.76
-38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	iiif_url 	277 	345 	642 	661  0.76
-39 	anvertraut 	O 	O 	-          	iiif_url 	359 	440 	644 	659  0
+36 	bekannter 	O 	O 	-           	https://iiif.url 	157 	181 	643 	660  0
+37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	https://iiif.url 	197 	262 	643 	661  0.76
+38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	https://iiif.url 	277 	345 	642 	661  0.76
+39 	anvertraut 	O 	O 	-          	https://iiif.url 	359 	440 	644 	659  0
 ```
 
 #### neat
