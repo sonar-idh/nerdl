@@ -97,18 +97,19 @@ Example: `SNP27974534-19010712-0-1-0-0.tsv`
 Information provided in `tsv` file:
   * sentence position
   * token text
-  * entity label
+  * surface entity label
   * embedded entity label
-  * wikidata ID
-  * OCR coordinates (top,bottom,left,right)
-  * confidence score
+  * surface entity wikidata ID
+  * `iiif` url
+  * token OCR coordinates (left,top,width,height)
+  * entity linking confidence
   
 Example:
 ```tsv
-36 	bekannter 	O 	O 	- 	0 	157 	181 	643 	660  0
-37 	Comédie 	B-ORG 	O 	Q61460498 	0 	197 	262 	643 	661  0.76
-38 	françaiſe 	I-ORG 	O 	Q61460498 	0 	277 	345 	642 	661  0.76
-39 	anvertraut 	O 	O 	- 	0 	359 	440 	644 	659  0
+36 	bekannter 	O 	O 	-           	iiif_url 	157 	181 	643 	660  0
+37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	iiif_url 	197 	262 	643 	661  0.76
+38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	iiif_url 	277 	345 	642 	661  0.76
+39 	anvertraut 	O 	O 	-          	iiif_url 	359 	440 	644 	659  0
 ```
 
 #### neat
