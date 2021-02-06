@@ -1,14 +1,10 @@
 # nerdl
 
-> Named Entity Recognition, Disambiguation and Linking
+> Named Entity Recognition, Disambiguation and Linking  
 
-### Pipeline
+SoNAR (IDH) workflow: [zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) → [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)
 
-[zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) → [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)
-
----
-
-#### requirements
+#### required
 - [Python3](https://www.python.org/) 
 
 #### recommended
@@ -89,6 +85,15 @@ page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
 #### trs
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
+
+Information provided by `tsv` files:
+  * `zdb-id`
+  * date of issue
+  * page/image number
+  * OCR coordinates of entity
+  * entity label
+  * wikidata id
+  * confidence score 
 
 #### neat
 Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
