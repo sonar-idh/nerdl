@@ -60,7 +60,7 @@ page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
 
 If images are served via [`iiif`](https://iiif.io/api/image/2.1/), the OCR coordinates can be used to 
-generate according image urls by also providing the `iiif-server-url`
+generate according image urls by also providing the `--image-url`
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv \
 --image-url=https://content.staatsbibliothek-berlin.de/zefys/SNP27974534-19010712-0-1-0-0/full/full/0/default.jpg
@@ -107,7 +107,7 @@ Information provided in `tsv` file:
   * surface entity wikidata ID
   * `iiif` url
   * token OCR coordinates (`left`,`top`,`width`,`height`)
-  * entity linking confidence
+  * entity linking confidence (top candidate only)
   
 Example:
 ```tsv
