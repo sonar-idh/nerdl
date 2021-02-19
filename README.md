@@ -100,12 +100,13 @@ SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
 Example: `SNP27974534-19010712-0-1-0-0.tsv`
 
 Information provided in `tsv` file:
+  * `iiif_url` baseurl for the document
   * sentence position
   * token text (`utf-8`) 
   * surface entity label 
   * embedded entity label
   * surface entity wikidata ID (ranked candidates separated by `|`)
-  * `iiif` url
+  * `url_id` is a placeholder
   * token OCR coordinates (`left`,`top`,`width`,`height`)
   
 Example:
