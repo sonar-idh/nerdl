@@ -110,10 +110,10 @@ Information provided in `tsv` file:
   
 Example:
 ```tsv
-36 	bekannter 	O 	O 	-           	https://iiif.url 	157 	181 	643 	660  0
-37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	https://iiif.url 	197 	262 	643 	661  0.76
-38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	https://iiif.url 	277 	345 	642 	661  0.76
-39 	anvertraut 	O 	O 	-          	https://iiif.url 	359 	440 	644 	659  0
+36 	bekannter 	O 	O 	-           	https://iiif.url 	157 	181 	643 	660
+37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	https://iiif.url 	197 	262 	643 	661
+38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	https://iiif.url 	277 	345 	642 	661
+39 	anvertraut 	O 	O 	-          	https://iiif.url 	359 	440 	644 	659
 ```
 
 #### neat
