@@ -104,10 +104,9 @@ Information provided in `tsv` file:
   * token text (`utf-8`) 
   * surface entity label 
   * embedded entity label
-  * surface entity wikidata ID
+  * surface entity wikidata ID (ranked candidates separated by `|`)
   * `iiif` url
   * token OCR coordinates (`left`,`top`,`width`,`height`)
-  * entity linking confidence (top candidate only)
   
 Example:
 ```tsv
