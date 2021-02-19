@@ -100,7 +100,7 @@ SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
 Example: `SNP27974534-19010712-0-1-0-0.tsv`
 
 Information provided in `tsv` file:
-  * `iiif_url` baseurl for the document
+  * `iiif_url` baseurl for the document as comment at the top
   * sentence position
   * token text (`utf-8`) 
   * surface entity label 
@@ -111,10 +111,12 @@ Information provided in `tsv` file:
   
 Example:
 ```tsv
-36 	bekannter 	O 	O 	-           	https://iiif.url 	157 	181 	643 	660
-37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	https://iiif.url 	197 	262 	643 	661
-38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	https://iiif.url 	277 	345 	642 	661
-39 	anvertraut 	O 	O 	-          	https://iiif.url 	359 	440 	644 	659
+SENTPOS TOKEN           NE-TAG  NE-EMB  WIKIDATA        url_id  left    top     width   height 
+# https://iiif.url
+36 	bekannter 	O 	O 	-           	- 	157 	181 	643 	660
+37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	- 	197 	262 	643 	661
+38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	- 	277 	345 	642 	661
+39 	anvertraut 	O 	O 	-          	- 	359 	440 	644 	659
 ```
 
 #### neat
