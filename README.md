@@ -19,7 +19,7 @@ source /path_to_venv/bin/activate
 ```
 
 #### zefys
-You need either local or remote access to the digitised newspaper images from [ZEFYS](http://zefys.staatsbibliothek-berlin.de/index.php?id=start&L=1)
+You need either local or remote access to the digitised newspaper images from [ZEFYS](https://zefys.staatsbibliothek-berlin.de/)
 
 local
 ```bash
