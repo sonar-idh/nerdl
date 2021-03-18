@@ -39,7 +39,7 @@ cd ocrd-galley
 ```
 
 You can now use [zdb2ocr](https://github.com/qurator-spk/ocrd-galley/blob/master/zdb2ocr) 
-to OCR digitised newspapers from [ZEFYS](http://zefys.staatsbibliothek-berlin.de/) based 
+to OCR digitised newspapers from [ZEFYS](https://zefys.staatsbibliothek-berlin.de/) based 
 on `zdb-id` and date of issue `yyyymmdd`
 ```bash
 zdb2ocr 27974534 19010712
