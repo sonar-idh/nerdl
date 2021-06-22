@@ -26,7 +26,7 @@ The workflow includes the following steps:
 - [Python3](https://www.python.org/) 
 
 ##### recommended
-- [`virtualenv`](https://virtualenv.pypa.io/en/latest/)
+- [`virtualenv`](https://virtualenv.pypa.io/en/stable/)
 - [`pip`](https://pip.pypa.io/en/stable/)
 
 Setup a Python3 `virtualenv` and activate it
