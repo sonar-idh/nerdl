@@ -4,6 +4,8 @@
 
 This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/), the [Berlin School of Library and Information Science (IBI)](https://www.ibi.hu-berlin.de/) and the [German Research Center for Artificial Intelligence (DFKI)](https://www.dfki.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
 
+The main aims are to explore the technical feasibility, quality and usability of the results for scholarly applications in historical social network analysis.
+
 The individual components are based on state-of-the-art technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
 
 The workflow was evaluated and the results are published in [BIPRA](https://www.degruyter.com/document/isbn/9783110691597/html).
