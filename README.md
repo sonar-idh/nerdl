@@ -124,6 +124,6 @@ Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, co
 ```bash
 git clone https://github.com/qurator-spk/neat
 cd neat
-firefox index.html
+firefox neat.html
 ```
 
