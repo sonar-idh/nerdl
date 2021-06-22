@@ -2,7 +2,7 @@
 
 > Named Entity Recognition, Disambiguation and Linking  
 
-This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) of digitized historical newspapers developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
+This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/) and the [German Research Center for Artificial Intelligence (DFKI)](https://www.dfki.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
 
 The individual components are based on state-of-the-art technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
 
