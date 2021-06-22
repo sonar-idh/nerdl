@@ -2,12 +2,26 @@
 
 > Named Entity Recognition, Disambiguation and Linking  
 
-SoNAR (IDH) workflow: [zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) → [ocrd](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) → [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) → [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) → [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) → [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs) → [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)
+This repository contains the documentation of a proof of concept workflow for optical character recognition, named entity recognition, disambiguation and linking of digitized historical newspapers developed in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project. The workflow was evaluated and the results are published in [BIPRA-paper](https://www.degruyter.com/document/isbn/9783110691597/html).
 
-#### required
+### About
+
+The workflow comprises of the following steps:
+
+1. Access images of digitized newspapers from [Zefys](https://github.com/sonar-idh/nerdl/blob/main/README.md#zefys) 
+2. Apply OCR to the images using the [OCR-D](https://github.com/sonar-idh/nerdl/blob/main/README.md#ocrd) framework to obtain text
+3. Transfrom the OCR output into TSV format with [page2tsv](https://github.com/sonar-idh/nerdl/blob/main/README.md#page2tsv) 
+4. Apply [sbb_ner](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner) to the OCR text and recognize entities
+5. Apply [sbb_ned](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned) to the NER result and disambiguate and link entities to Wikidata IDs
+6. [Optional:] Use the [neat](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat) tool to manually inspect or correct the TSV output
+7. Transform the TSV output for use in [trs](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs)
+
+### Prerequisites
+
+##### required
 - [Python3](https://www.python.org/) 
 
-#### recommended
+##### recommended
 - `virtualenv`
 
 ---
@@ -19,7 +33,7 @@ source /path_to_venv/bin/activate
 ```
 
 #### zefys
-You need either local or remote access to the digitised newspaper images from [ZEFYS](https://zefys.staatsbibliothek-berlin.de/)
+You need either local or remote access to the digitised newspaper images from [Zefys](https://zefys.staatsbibliothek-berlin.de/)
 
 local
 ```bash
@@ -27,8 +41,7 @@ mkdir zefys
 mount -o ro,noload /zefys/archive /zeyfs
 ```
 remote  
-> Download images via [`iiif`](https://iiif.io/)  
-(see [sbb-lab](https://lab.sbb.berlin/5393/?lang=en) for further information)
+> Download images using the [`API`](https://lab.sbb.berlin/5393/?lang=en)  
 
 #### ocrd
 Install [OCR-D](https://ocr-d.de/) workflow via [ocrd-galley](https://github.com/qurator-spk/ocrd-galley)
@@ -39,7 +52,7 @@ cd ocrd-galley
 ```
 
 You can now use [zdb2ocr](https://github.com/qurator-spk/ocrd-galley/blob/master/zdb2ocr) 
-to OCR digitised newspapers from [ZEFYS](https://zefys.staatsbibliothek-berlin.de/) based 
+to OCR digitised newspapers from [Zefys](https://zefys.staatsbibliothek-berlin.de/) based 
 on `zdb-id` and date of issue `yyyymmdd`
 ```bash
 zdb2ocr 27974534 19010712
@@ -83,6 +96,14 @@ Apply named entity disambiguation and linking with [sbb_ned](https://github.com/
 page2tsv SNP27974534-19010712-0-1-0-0.tsv --ned-rest-endpoint
 ```
 
+#### neat
+Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
+```bash
+git clone https://github.com/qurator-spk/neat
+cd neat
+firefox neat.html
+```
+
 #### trs
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
@@ -117,13 +138,5 @@ SENTPOS TOKEN           NE-TAG  NE-EMB  WIKIDATA        url_id  left    top     
 37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	- 	197 	262 	643 	661
 38 	françaiſe 	I-ORG 	I-LOC 	Q61460498 	- 	277 	345 	642 	661
 39 	anvertraut 	O 	O 	-          	- 	359 	440 	644 	659
-```
-
-#### neat
-Use the browser-based [neat](https://github.com/qurator-spk/neat) to inspect, correct or annotate `tsv` files
-```bash
-git clone https://github.com/qurator-spk/neat
-cd neat
-firefox neat.html
 ```
 
