@@ -2,9 +2,11 @@
 
 > Named Entity Recognition, Disambiguation and Linking  
 
-This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/), the [Berlin School of Library and Information Science (IBI)](https://www.ibi.hu-berlin.de/) and the [German Research Center for Artificial Intelligence (DFKI)](https://www.dfki.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
+This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers for historical social network analysis. 
 
-The main aims are to explore the technical feasibility, quality and usability of the results for scholarly applications in historical social network analysis.
+The workflow was developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/), the [Berlin School of Library and Information Science (IBI)](https://www.ibi.hu-berlin.de/) and the [German Research Center for Artificial Intelligence (DFKI)](https://www.dfki.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
+
+The main aims were to explore the technical feasibility, quality and usability of the results for scholarly applications in historical social network analysis.
 
 The individual components are based on state-of-the-art technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
 
@@ -23,6 +25,8 @@ The workflow includes the following steps:
 [7. Transform the results for use in historical social network analysis](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs)  
 
 ### Prerequisites
+
+To install and test the workflow, the following prerequisites must be met.
 
 ##### required
 - [Python3](https://www.python.org/) 
@@ -55,7 +59,7 @@ mount -o ro,noload /zefys/archive /zeyfs
 Download images using the [`API`](https://lab.sbb.berlin/5393/?lang=en)  
 
 ### ocrd
-Install [OCR-D](https://ocr-d.de/) workflow via [ocrd-galley](https://github.com/qurator-spk/ocrd-galley)
+Install [OCR-D](https://ocr-d.de/) via [ocrd-galley](https://github.com/qurator-spk/ocrd-galley)
 ```bash
 git clone https://github.com/qurator-spk/ocrd-galley
 cd ocrd-galley
@@ -64,7 +68,7 @@ cd ocrd-galley
 
 You can now use [zdb2ocr](https://github.com/qurator-spk/ocrd-galley/blob/master/zdb2ocr) 
 to OCR digitised newspapers from [Zefys](https://zefys.staatsbibliothek-berlin.de/) based 
-on `zdb-id` and date of issue `yyyymmdd`
+on their `zdb-id` (with any `-` removed) and date of issue `yyyymmdd`
 ```bash
 zdb2ocr 27974534 19010712
 ```
@@ -119,6 +123,8 @@ firefox neat.html
 **TODO**  
 Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
 
+
+### TSV documentation
 Information provided by `tsv` filename:  
 
 SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
