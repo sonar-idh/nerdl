@@ -2,9 +2,11 @@
 
 > Named Entity Recognition, Disambiguation and Linking  
 
-This repository contains a proof of concept workflow for optical character recognition, named entity recognition, disambiguation and linking of digitized historical newspapers developed in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project. 
+This repository contains a proof of concept workflow for optical character recognition, named entity recognition, disambiguation and linking of digitized historical newspapers developed by the [Berlin State Library (SBB)](https://github.com/StaatsbibliothekBerlin/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project. 
 
-The workflow was evaluated and the results are published in [BIPRA-paper](https://www.degruyter.com/document/isbn/9783110691597/html).
+The individual components are based on state-of-the-art technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
+
+The workflow was evaluated and the results are published in [BIPRA](https://www.degruyter.com/document/isbn/9783110691597/html).
 
 ### About
 
@@ -24,24 +26,30 @@ The workflow includes the following steps:
 - [Python3](https://www.python.org/) 
 
 ##### recommended
-- `virtualenv`
+- [`virtualenv`](https://virtualenv.pypa.io/en/latest/)
+- [`pip`](https://pip.pypa.io/en/stable/)
 
-Setup a Python3 virtual environment and activate it
-```
+Setup a Python3 `virtualenv` and activate it
+```bash
 python3 -m venv /path_to_venv
 source /path_to_venv/bin/activate
+```
+
+Update `pip`
+```python
+pip install -U pip
 ```
 
 ### zefys
 You need either local or remote access to the digitised newspaper images from [Zefys](https://zefys.staatsbibliothek-berlin.de/)
 
-#### local
+##### local
 ```bash
 mkdir zefys
 mount -o ro,noload /zefys/archive /zeyfs
 ```
 
-#### remote  
+##### remote  
 Download images using the [`API`](https://lab.sbb.berlin/5393/?lang=en)  
 
 ### ocrd
