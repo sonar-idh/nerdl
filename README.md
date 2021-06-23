@@ -82,7 +82,7 @@ pip install .
 ```
 
 You can now use [page2tsv](https://github.com/qurator-spk/page2tsv) to transform the 
-[PAGE-XML](https://github.com/PRImA-Research-Lab/PAGE-XML) output of the OCR into a tab-separated-values (`tsv`) format
+[PAGE-XML](https://github.com/PRImA-Research-Lab/PAGE-XML) output of the OCR into a tab-separated-values ([`tsv`](https://github.com/sonar-idh/nerdl#tsv-documentation)) format
 ```bash
 page2tsv SNP27974534-19010712-0-1-0-0.xml SNP27974534-19010712-0-1-0-0.tsv
 ```
@@ -121,11 +121,11 @@ firefox neat.html
 
 ### trs
 **TODO**  
-Coupling `tsv` to [trs](https://github.com/sonar-idh/Transformer)
+Coupling [`tsv`](https://github.com/sonar-idh/nerdl#tsv-documentation) to [trs](https://github.com/sonar-idh/Transformer)
 
 
 ### TSV documentation
-Information provided by `tsv` filename:  
+Information provided by the `tsv` filename:  
 
 SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
   * `zdb-id` (any `-` removed)
@@ -137,19 +137,19 @@ SNP{`zdb-id`}-{`yyyymmdd`}-{`issue`}-{`page`}-{`article`}-{`version`}.tsv
 
 Example: `SNP27974534-19010712-0-1-0-0.tsv`
 
-Information provided in `tsv` file:
-  * `iiif_url` baseurl for the document as comment at the top
-  * sentence position
-  * token text (`utf-8`) 
-  * surface entity label 
-  * embedded entity label
-  * surface entity wikidata ID (ranked candidates separated by `|`)
-  * `url_id` is a placeholder
-  * token OCR coordinates (`left`,`top`,`width`,`height`)
+Information provided in the `tsv` file columns:
+  * `iiif_url` placeholder injected as a comment under the column headers
+  * `No.` indicates the sentence position (`≥1`, `0` marks sentence boundaries)
+  * `TOKEN` contains the token text (`utf-8` encoded) 
+  * `NE-TAG` contains the surface entity label (`BIO` chunking)
+  * `NE-EMB` contains the embedded entity label (`BIO` chunking)
+  * `ID` contains the surface entity wikidata ID (ranked candidates are separated by `|`)
+  * `url_id` is replaced with the `iiif_url`
+  * `left`,`top`,`width`,`height` hold the token OCR coordinates as absolute pixel values
   
 Example:
 ```tsv
-SENTPOS TOKEN           NE-TAG  NE-EMB  WIKIDATA        url_id  left    top     width   height 
+No.     TOKEN           NE-TAG  NE-EMB  ID              url_id  left    top     width   height 
 # https://iiif.url
 36 	bekannter 	O 	O 	-           	- 	157 	181 	643 	660
 37 	Comédie 	B-ORG 	B-LOC 	Q61460498 	- 	197 	262 	643 	661
