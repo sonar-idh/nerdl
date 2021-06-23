@@ -1,12 +1,10 @@
-# nerdl
+> Named Entity Recognition, Disambiguation and Linking for Historical Network Analysis 
 
-> Named Entity Recognition, Disambiguation and Linking  
-
-This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers for historical social network analysis. 
+This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers for historical network analysis (HNA). 
 
 The workflow was developed by the [Berlin State Library (SBB)](https://staatsbibliothek-berlin.de/), the [Berlin School of Library and Information Science (IBI)](https://www.ibi.hu-berlin.de/) and the [German Research Center for Artificial Intelligence (DFKI)](https://www.dfki.de/) in the context of the [SoNAR (IDH)](http://sonar.fh-potsdam.de/) project.
 
-The main aims were to explore the technical feasibility, quality and usability of the results for scholarly applications in historical social network analysis and [data visualization](https://github.com/sonar-idh/visualization-prototypes).
+The main aims were to explore the technical feasibility, quality and usability of the results for scholarly use cases in historical network analysis and [data visualization](https://github.com/sonar-idh/visualization-prototypes).
 
 The individual components are based on state-of-the-art open source technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
 
@@ -22,7 +20,7 @@ The workflow includes the following steps:
 [4. Recognize named entities in the OCRed text](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ner)  
 [5. Disambiguate and link entities to Wikidata-IDs](https://github.com/sonar-idh/nerdl/blob/main/README.md#sbb_ned)  
 [6. Manually inspect or edit the results in a browser](https://github.com/sonar-idh/nerdl/blob/main/README.md#neat)  
-[7. Transform the results for use in historical social network analysis](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs)  
+[7. Transform the results for use in a graph db](https://github.com/sonar-idh/nerdl/blob/main/README.md#trs)  
 
 ### Prerequisites
 
