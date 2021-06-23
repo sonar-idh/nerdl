@@ -145,7 +145,7 @@ Information provided in the `tsv` file columns:
   * `url_id` is replaced with the `iiif_url`
   * `left`,`top`,`width`,`height` hold the token OCR coordinates as absolute pixel values
   
-Example:
+Example (see also [example](https://github.com/sonar-idh/nerdl/tree/main/example)):
 ```tsv
 No.     TOKEN           NE-TAG  NE-EMB  ID              url_id  left    top     width   height 
 # https://iiif.url
