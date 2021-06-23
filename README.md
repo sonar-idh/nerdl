@@ -1,4 +1,4 @@
-> Named Entity Recognition, Disambiguation and Linking for Historical Network Analysis 
+> Named Entity Recognition, Disambiguation and Linking of Digitized Newspapers for Historical Network Analysis 
 
 This repository contains a proof of concept workflow for optical character recognition (OCR), named entity recognition (NER), named entity disambiguation and linking (NED) and transformation of digitized historical newspapers for historical network analysis (HNA). 
 
