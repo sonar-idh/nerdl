@@ -118,9 +118,13 @@ firefox neat.html
 ```
 
 ### trs
-**TODO**  
-Coupling [`tsv`](https://github.com/sonar-idh/nerdl#tsv-documentation) to [trs](https://github.com/sonar-idh/Transformer)
+Install [trs](https://github.com/sonar-idh/Transformer)
+```bash
+git clone https://github.com/sonar-idh/Transformer
+```
 
+Follow the [instructions](https://github.com/sonar-idh/Transformer#ocr-transformieren-der-ocr-tsv-dateien-zu-json-schritt-1) 
+provided 
 
 ### TSV documentation
 Information provided by the `tsv` filename:  
