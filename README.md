@@ -8,7 +8,7 @@ The main aims were to explore the technical feasibility, quality and usability o
 
 The individual components are based on state-of-the-art open source technologies from the [OCR-D](https://github.com/OCR-D) and [QURATOR](https://github.com/qurator-spk) projects.
 
-The workflow was evaluated and the results are published in [BIPRA](https://www.degruyter.com/document/isbn/9783110691597/html).
+The workflow was evaluated and the results are published [here](https://www.degruyter.com/document/doi/10.1515/9783110691597-012/html) (German).
 
 ### About
 
